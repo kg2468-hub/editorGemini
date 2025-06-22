@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Design Móvel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/react-image-crop/dist/ReactCrop.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Styles for Transformation Controls */
+      .transform-controls-container {
+        /* border is now set inline for dynamic width based on zoom */
+      }
+
+      .transform-handle {
+        position: absolute;
+        box-sizing: border-box;
+      }
+
+      /* Specific cursors for resize handles */
+      .nw-handle { cursor: nwse-resize; }
+      .n-handle { cursor: ns-resize; }
+      .ne-handle { cursor: nesw-resize; }
+      .w-handle { cursor: ew-resize; }
+      .e-handle { cursor: ew-resize; }
+      .sw-handle { cursor: nesw-resize; }
+      .s-handle { cursor: ns-resize; }
+      .se-handle { cursor: nwse-resize; }
+      
+      .rotate-handle {
+        /* Custom rotation cursor - set inline */
+      }
+
+      /* Styles for Range Input (Opacity Slider) */
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        background: #4A5568; /* gray-600 */
+        border-radius: 5px;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity .15s ease-in-out;
+      }
+
+      input[type="range"]:hover {
+        opacity: 1;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: #6366F1; /* indigo-500 */
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #E0E0E0; /* Light border for thumb */
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: #6366F1; /* indigo-500 */
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #E0E0E0;
+      }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-image-crop": "https://esm.sh/react-image-crop@10.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <noscript>Você precisa habilitar o JavaScript para rodar este aplicativo.</noscript>
+    <div id="root"></div>
+    <!-- O script do React será injetado aqui pelo processo de build -->
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

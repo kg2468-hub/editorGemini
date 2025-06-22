@@ -1,0 +1,5 @@
+{
+  "name": "Criador de Design Móvel",
+  "description": "Uma aplicação web para criar designs de interface de usuário para dispositivos móveis, permitindo adicionar e manipular elementos como texto, retângulos, círculos e imagens em uma tela de canvas.",
+  "requestFramePermissions": []
+}
